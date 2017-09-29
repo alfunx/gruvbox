@@ -329,7 +329,7 @@ if exists('g:gruvbox_number_column')
   let s:number_column = get(s:gb, g:gruvbox_number_column)
 endif
 
-let s:sign_column = s:bg1
+let s:sign_column = s:bg0
 
 if exists('g:gitgutter_override_sign_column_highlight') &&
       \ g:gitgutter_override_sign_column_highlight == 1
@@ -517,7 +517,7 @@ if version >= 703
   call s:HL('Conceal', s:blue, s:none)
 
   " Line number of CursorLine
-  call s:HL('CursorLineNr', s:yellow, s:bg1)
+  call s:HL('CursorLineNr', s:fg4, s:bg1)
 endif
 
 hi! link NonText GruvboxBg2
@@ -535,14 +535,14 @@ call s:HL('SneakLabel', s:orange, s:bg2, s:bold)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
-call s:HL('StatusLine',   s:bg2, s:fg1, s:inverse)
+call s:HL('StatusLine',   s:bg1, s:fg1, s:inverse)
 call s:HL('StatusLineNC', s:bg1, s:fg4, s:inverse)
 
 " The column separating vertically split windows
-call s:HL('VertSplit', s:bg3, s:vert_split)
+call s:HL('VertSplit', s:bg1, s:vert_split)
 
 " Current match in wildmenu completion
-call s:HL('WildMenu', s:blue, s:bg2, s:bold)
+call s:HL('WildMenu', s:red, s:bg1, s:bold)
 
 " Directory names, special names in listing
 hi! link Directory GruvboxGreenBold
@@ -573,7 +573,7 @@ call s:HL('SignColumn', s:none, s:sign_column)
 " Line used for closed folds
 call s:HL('Folded', s:gray, s:bg1, s:italic)
 " Column where folds are displayed
-call s:HL('FoldColumn', s:gray, s:bg1)
+call s:HL('FoldColumn', s:gray, s:bg0)
 
 " }}}
 " Cursor: {{{
@@ -673,7 +673,7 @@ if version >= 700
   " Popup menu: normal item
   call s:HL('Pmenu', s:fg1, s:bg2)
   " Popup menu: selected item
-  call s:HL('PmenuSel', s:bg2, s:blue, s:bold)
+  call s:HL('PmenuSel', s:bg2, s:red, s:bold)
   " Popup menu: scrollbar
   call s:HL('PmenuSbar', s:none, s:bg2)
   " Popup menu: scrollbar thumb
@@ -781,10 +781,10 @@ let g:niji_light_colours = g:rbpt_colorpairs
 "}}}
 " GitGutter: {{{
 
-hi! link GitGutterAdd GruvboxGreenSign
-hi! link GitGutterChange GruvboxAquaSign
+hi! link GitGutterAdd GruvboxAquaSign
+hi! link GitGutterChange GruvboxYellowSign
 hi! link GitGutterDelete GruvboxRedSign
-hi! link GitGutterChangeDelete GruvboxAquaSign
+hi! link GitGutterChangeDelete GruvboxOrangeSign
 
 " }}}
 " GitCommit: "{{{
