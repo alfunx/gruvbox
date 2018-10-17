@@ -526,8 +526,12 @@ hi! link SpecialKey GruvboxBg2
 call s:HL('Visual',    s:none,  s:bg3, s:invert_selection)
 hi! link VisualNOS Visual
 
-call s:HL('Search',    s:yellow, s:bg0, s:inverse)
-call s:HL('IncSearch', s:hls_cursor, s:bg0, s:inverse)
+call s:HL('Search',     s:orange, s:bg2, s:bold)
+call s:HL('IncSearch',  s:red,    s:bg2, s:bold)
+
+call s:HL('Sneak',      s:red,    s:bg2, s:bold)
+call s:HL('SneakScope', s:red,    s:bg2, s:bold)
+call s:HL('SneakLabel', s:orange, s:bg2, s:bold)
 
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
