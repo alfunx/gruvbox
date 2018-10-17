@@ -528,6 +528,17 @@ hi! link VisualNOS Visual
 call s:HL('Search',    s:yellow, s:bg0, s:inverse)
 call s:HL('IncSearch', s:hls_cursor, s:bg0, s:inverse)
 
+call s:HL('IncSearchCursor',       s:red,    s:bg2, s:bold)
+call s:HL('IncSearchOnCursor',     s:red,    s:bg2, s:bold)
+call s:HL('IncSearchMatch',        s:orange, s:bg2, s:bold)
+call s:HL('IncSearchMatchReverse', s:orange, s:bg2, s:bold)
+call s:HL('Search',                s:orange, s:bg2, s:bold)
+call s:HL('IncSearch',             s:orange, s:bg2, s:bold)
+
+call s:HL('Sneak',                 s:red,    s:bg2, s:bold)
+call s:HL('SneakScope',            s:red,    s:bg2, s:bold)
+call s:HL('SneakLabel',            s:orange, s:bg2, s:bold)
+
 call s:HL('Underlined', s:blue, s:none, s:underline)
 
 call s:HL('StatusLine',   s:bg2, s:fg1, s:inverse)
