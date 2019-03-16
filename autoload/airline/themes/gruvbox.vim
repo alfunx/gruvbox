@@ -17,7 +17,7 @@ function! airline#themes#gruvbox#refresh()
   let error_group = airline#themes#get_highlight2(['Normal', 'bg'], ['Error', 'fg'])
 
   let s:N1 = airline#themes#get_highlight2(['Normal', 'bg'], ['StatusLineNC', 'bg'])
-  let s:N2 = airline#themes#get_highlight2(['StatusLineNC', 'bg'], ['Pmenu', 'bg'])
+  let s:N2 = airline#themes#get_highlight2(['StatusLineNC', 'bg'], ['Search', 'bg'])
   let s:N3 = airline#themes#get_highlight2(['StatusLineNC', 'bg'], ['FoldColumn', 'bg'])
   let g:airline#themes#gruvbox#palette.normal = airline#themes#generate_color_map(s:N1, s:N2, s:N3)
   let g:airline#themes#gruvbox#palette.normal_modified = { 'airline_c': modified_group }
@@ -72,14 +72,25 @@ function! airline#themes#gruvbox#refresh()
 
   let g:airline#themes#gruvbox#palette.accents = { 'red': accents_group }
 
-  let s:TF = airline#themes#get_highlight2(['FoldColumn', 'bg'], ['FoldColumn', 'bg'])
+  let s:MOD1 = airline#themes#get_highlight2(['GruvboxFg0', 'fg'], ['StatusLineNC', 'bg'])
+  let s:MOD2 = airline#themes#get_highlight2(['GruvboxFg0', 'fg'], ['BufTabLineHidden', 'bg'])
+  let s:TF = airline#themes#get_highlight2(['FoldColumn', 'fg'], ['FoldColumn', 'bg'])
+  let s:TN = airline#themes#get_highlight2(['BufTabLineHidden', 'fg'], ['BufTabLineHidden', 'bg'])
   let g:airline#themes#gruvbox#palette.tabline = {
-    \ 'airline_tab':  s:N2,
-    \ 'airline_tabsel':  s:N1,
-    \ 'airline_tabtype':  s:N2,
-    \ 'airline_tabfill':  s:TF,
-    \ 'airline_tabhid':  s:IA,
-    \ 'airline_tabmod':  s:I1
+    \ 'airline_tab': s:TN,
+    \ 'airline_tabsel': s:N1,
+    \ 'airline_tabtype': s:N2,
+    \ 'airline_tabfill': s:TF,
+    \ 'airline_tabhid': s:IA,
+    \ 'airline_tabmod': s:MOD1,
+    \ 'airline_tabmod_unsel': s:MOD2,
+    \ 'airline_tab_right': s:TN,
+    \ 'airline_tabsel_right': s:N1,
+    \ 'airline_tabtype_right': s:N2,
+    \ 'airline_tabfill_right': s:TF,
+    \ 'airline_tabhid_right': s:IA,
+    \ 'airline_tabmod_right': s:MOD1,
+    \ 'airline_tabmod_unsel_right': s:MOD2
     \ }
 
 endfunction
