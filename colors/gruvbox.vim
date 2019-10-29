@@ -594,6 +594,14 @@ endif
 call s:HL('Comment', s:gray, s:none, s:italicize_comments)
 call s:HL('Todo', s:vim_fg, s:vim_bg, s:bold . s:italic)
 call s:HL('Error', s:red, s:vim_bg, s:bold . s:inverse)
+call s:HL('Warning', s:yellow, s:vim_bg, s:bold . s:inverse)
+call s:HL('Info', s:blue, s:vim_bg, s:bold . s:inverse)
+call s:HL('Hint', s:purple, s:vim_bg, s:bold . s:inverse)
+
+call s:HL('VirtualTextError', s:red, s:none, s:italic)
+call s:HL('VirtualTextWarning', s:yellow, s:none, s:italic)
+call s:HL('VirtualTextInfo', s:blue, s:none, s:italic)
+call s:HL('VirtualTextHint', s:purple, s:none, s:italic)
 
 " Generic statement
 hi! link Statement GruvboxRed
@@ -857,10 +865,12 @@ call s:HL('BufTabLineFill', s:bg0, s:bg0)
 call s:HL('ALEError', s:none, s:none, s:undercurl, s:red)
 call s:HL('ALEWarning', s:none, s:none, s:undercurl, s:yellow)
 call s:HL('ALEInfo', s:none, s:none, s:undercurl, s:blue)
+call s:HL('ALEHint', s:none, s:none, s:undercurl, s:purple)
 
 hi! link ALEErrorSign GruvboxRedSign
 hi! link ALEWarningSign GruvboxYellowSign
 hi! link ALEInfoSign GruvboxBlueSign
+hi! link ALEHintSign GruvboxPurpleSign
 
 " }}}
 " Dirvish: {{{
