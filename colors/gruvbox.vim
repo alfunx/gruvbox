@@ -551,15 +551,15 @@ hi! link Directory GruvboxGreenBold
 hi! link Title GruvboxGreenBold
 
 " Error messages on the command line
-call s:HL('ErrorMsg',   s:bg0, s:red, s:bold)
+hi! link ErrorMsg GruvboxRedBold
+" Warning messages on the command line
+hi! link WarningMsg GruvboxOrangeBold
 " More prompt: -- More --
 hi! link MoreMsg GruvboxYellowBold
 " Current mode message: -- INSERT --
 hi! link ModeMsg GruvboxYellowBold
 " 'Press enter' prompt and yes/no questions
-hi! link Question GruvboxOrangeBold
-" Warning messages
-hi! link WarningMsg GruvboxRedBold
+hi! link Question GruvboxPurpleBold
 
 " }}}
 " Gutter: {{{
