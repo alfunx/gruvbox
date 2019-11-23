@@ -521,6 +521,7 @@ if version >= 703
 endif
 
 hi! link NonText GruvboxBg2
+hi! link Whitespace GruvboxBg2
 hi! link SpecialKey GruvboxBg2
 
 call s:HL('Visual',     s:none,   s:bg2)
