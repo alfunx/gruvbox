@@ -697,18 +697,14 @@ call s:HL('DiffText',   s:yellow, s:bg0, s:inverse)
 " Spelling: {{{
 
 if has("spell")
-  " Not capitalised word, or compile warnings
-  if g:gruvbox_improved_warnings == 0
-    call s:HL('SpellCap',   s:none, s:none, s:undercurl, s:red)
-  else
-    call s:HL('SpellCap',   s:green, s:none, s:bold . s:italic)
-  endif
   " Not recognized word
-  call s:HL('SpellBad',   s:none, s:none, s:undercurl, s:blue)
+  call s:HL('SpellBad',   s:none, s:none, s:underline, s:red)
+  " Not capitalised word
+  call s:HL('SpellCap',   s:none, s:none, s:underline, s:yellow)
   " Wrong spelling for selected region
-  call s:HL('SpellLocal', s:none, s:none, s:undercurl, s:aqua)
+  call s:HL('SpellLocal', s:none, s:none, s:underline, s:blue)
   " Rare word
-  call s:HL('SpellRare',  s:none, s:none, s:undercurl, s:purple)
+  call s:HL('SpellRare',  s:none, s:none, s:underline, s:purple)
 endif
 
 " }}}
@@ -869,10 +865,10 @@ call s:HL('BufTabLineFill', s:bg0, s:bg0)
 " }}}
 " Asynchronous Lint Engine: {{{
 
-call s:HL('ALEError', s:none, s:none, s:undercurl, s:red)
+call s:HL('ALEError',   s:none, s:none, s:undercurl, s:red)
 call s:HL('ALEWarning', s:none, s:none, s:undercurl, s:yellow)
-call s:HL('ALEInfo', s:none, s:none, s:undercurl, s:blue)
-call s:HL('ALEHint', s:none, s:none, s:undercurl, s:purple)
+call s:HL('ALEInfo',    s:none, s:none, s:undercurl, s:blue)
+call s:HL('ALEHint',    s:none, s:none, s:undercurl, s:purple)
 
 hi! link ALEErrorSign GruvboxRedSign
 hi! link ALEWarningSign GruvboxYellowSign
