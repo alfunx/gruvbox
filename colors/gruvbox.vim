@@ -175,6 +175,9 @@ if s:is_dark
     let s:bg0  = s:gb.dark0_hard
   endif
 
+  let s:bgs  = s:gb.dark0_soft
+  let s:bgh  = s:gb.dark0_hard
+
   let s:bg1  = s:gb.dark1
   let s:bg2  = s:gb.dark2
   let s:bg3  = s:gb.dark3
@@ -204,6 +207,9 @@ else
   elseif g:gruvbox_contrast_light == 'hard'
     let s:bg0  = s:gb.light0_hard
   endif
+
+  let s:bgs  = s:gb.light0_soft
+  let s:bgh  = s:gb.light0_hard
 
   let s:bg1  = s:gb.light1
   let s:bg2  = s:gb.light2
@@ -494,7 +500,7 @@ endif
 
 if version >= 700
   " Screen line that the cursor is
-  call s:HL('CursorLine',   s:none, s:bg1)
+  call s:HL('CursorLine',   s:none, s:bgs)
   " Screen column that the cursor is
   hi! link CursorColumn CursorLine
 
@@ -517,7 +523,7 @@ if version >= 703
   call s:HL('Conceal', s:blue, s:none)
 
   " Line number of CursorLine
-  call s:HL('CursorLineNr', s:fg4, s:bg1)
+  call s:HL('CursorLineNr', s:bg4, s:bgs, s:bold)
 endif
 
 hi! link NonText GruvboxBg2
@@ -566,7 +572,7 @@ hi! link Question GruvboxPurpleBold
 " Gutter: {{{
 
 " Line number for :number and :# commands
-call s:HL('LineNr', s:bg4, s:number_column)
+call s:HL('LineNr', s:bg3, s:number_column)
 
 " Column where signs are displayed
 call s:HL('SignColumn', s:none, s:sign_column)
