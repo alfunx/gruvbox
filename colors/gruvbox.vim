@@ -951,6 +951,15 @@ call s:HL('CocInfoHighlight', s:none, s:none, s:undercurl, s:yellow)
 call s:HL('CocHintHighlight', s:none, s:none, s:undercurl, s:blue)
 
 " }}}
+" GitMessenger: {{{
+
+hi! link gitmessengerHeader GruvboxBg4
+hi! link gitmessengerHash GruvboxOrange
+hi! link gitmessengerHistory GruvboxRed
+hi! link gitmessengerEmail GruvboxBg4
+hi! link gitmessengerPopupNormal NormalFloat
+
+" }}}
 
 " Filetype specific -----------------------------------------------------------
 " Diff: {{{
