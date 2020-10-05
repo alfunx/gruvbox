@@ -488,6 +488,7 @@ call s:HL('GruvboxOrangeSign', s:orange, s:sign_column, s:invert_signs)
 
 " Normal text
 call s:HL('Normal', s:fg1, s:bg0)
+call s:HL('NormalFloat', s:fg1, s:bg1)
 
 " Correct background (see issue #7):
 " --- Problem with changing between dark and light on 256 color terminal
@@ -512,7 +513,8 @@ if version >= 700
   hi! link TabLine TabLineFill
 
   " Match paired bracket under the cursor
-  call s:HL('MatchParen', s:none, s:bg3, s:bold)
+  call s:HL('MatchParen', s:none, s:bg2, s:bold)
+  "call s:HL('MatchParen', s:none, s:none, s:bold . s:inverse)
 endif
 
 if version >= 703
